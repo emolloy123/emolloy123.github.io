@@ -28,7 +28,7 @@ nav {
 }
 
 .nav-links a {
-    color: #61dafb;
+    color: #6361fb;
     text-decoration: none;
     font-weight: bold;
 }
@@ -108,7 +108,7 @@ footer {
     text-align: center;
 }
 .narrow-paragraph {
-    width: 300px;
+    max-width: 80%; 
     margin: 0 auto;
     text-align: center;
 }

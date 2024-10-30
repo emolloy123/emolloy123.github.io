@@ -26,7 +26,11 @@ nav {
     display: inline;
     margin-left: 20px;
 }
-
+.container {
+    width: 80%; /* Set the width to 80% of the page width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Optional: Add some padding */
+}
 .nav-links a {
     color: #6361fb;
     text-decoration: none;

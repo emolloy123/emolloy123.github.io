@@ -107,3 +107,12 @@ footer {
     padding: 20px;
     text-align: center;
 }
+.narrow-paragraph {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.center-heading {
+    text-align: center;
+}

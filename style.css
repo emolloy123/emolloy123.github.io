@@ -6,8 +6,9 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     color: #333;
+    line-height: 1.6;
 }
 
 nav {
@@ -26,15 +27,16 @@ nav {
     display: inline;
     margin-left: 20px;
 }
-.container {
-    width: 80%; /* Set the width to 80% of the page width */
-    margin: 0 auto; /* Center the container */
-    padding: 20px; /* Optional: Add some padding */
-}
+
 .nav-links a {
     color: #6361fb;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #61dafb;
 }
 
 .logo {
@@ -49,7 +51,7 @@ section {
 }
 
 #home {
-    background: #61dafb;
+    background: linear-gradient(135deg, #61dafb, #282c34);
     color: white;
     padding: 120px 20px;
 }
@@ -76,11 +78,12 @@ section {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .button:hover {
     background: #333;
+    transform: scale(1.05);
 }
 
 #projects .project-list {
@@ -97,6 +100,11 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 300px;
     text-align: left;
+    transition: transform 0.3s;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
 }
 
 .project-item h3 {
@@ -109,12 +117,19 @@ section {
     padding: 80px 20px;
 }
 
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
 footer {
     background: #333;
     color: #ddd;
     padding: 20px;
     text-align: center;
 }
+
 .narrow-paragraph {
     max-width: 80%; 
     margin: 0 auto;

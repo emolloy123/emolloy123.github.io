@@ -3,120 +3,94 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Eoin Molloy— Source</title>
-  <meta name="description" content="Minimal personal source page" />
+  <title>Eoin Molloy — About</title>
   <style>
-    /* Minimal, clean, white background */
-    :root{
-      --max-w: 720px;
-      --muted: #6b7280; /* subtle gray */
-      --accent: #111827; /* near-black for text */
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background-color: #fff;
+      color: #111827;
+      line-height: 1.6;
     }
-    html,body{height:100%;}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: #ffffff;
-      color:var(--accent);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:40px 20px;
-    }
-    .card{
-      width:100%;
-      max-width:var(--max-w);
-      text-align:left;
-      padding:40px;
-      box-sizing:border-box;
-      border-radius:12px;
-      box-shadow: 0 6px 22px rgba(12,15,25,0.06);
-      border:1px solid rgba(15,23,42,0.04);
-    }
-    .top{
-      display:flex;
-      gap:20px;
-      align-items:center;
-    }
-    .avatar{
-      width:96px;
-      height:96px;
-      border-radius:999px;
-      overflow:hidden;
-      flex:0 0 96px;
-      border:1px solid rgba(0,0,0,0.06);
-    }
-    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
-    h1{font-size:20px;margin:0 0 6px 0;letter-spacing:-0.2px}
-    p.lead{margin:0;color:var(--muted);line-height:1.5}
 
-    .meta{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
-    .btn{
-      display:inline-block;
-      text-decoration:none;
-      padding:10px 14px;
-      border-radius:10px;
-      font-weight:600;
-      font-size:14px;
-      border:1px solid rgba(15,23,42,0.06);
-      background:transparent;
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 60px 20px;
+      box-sizing: border-box;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
     }
-    .btn.primary{
-      background:#111827;
-      color:white;
-      border-color:transparent;
-    }
-    .btn.secondary{color:var(--muted)}
 
-    footer{
-      margin-top:28px;
-      font-size:13px;
-      color:var(--muted);
-      display:flex;
-      gap:10px;
-      align-items:center;
+    img.profile {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      margin-bottom: 30px;
+      border: 2px solid rgba(0,0,0,0.05);
     }
-    .links a{color:inherit;text-decoration:none;border-bottom:1px dashed rgba(0,0,0,0.06);padding-bottom:2px}
 
-    @media (max-width:520px){
-      .top{flex-direction:row;gap:12px}
-      .card{padding:28px}
-      .avatar{width:72px;height:72px;flex:0 0 72px}
-      h1{font-size:18px}
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
     }
+
+    p.intro {
+      max-width: 650px;
+      font-size: 1.1rem;
+      color: #4b5563;
+      margin-bottom: 40px;
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 10px;
+      background-color: #111827;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.25s;
+    }
+
+    a.button:hover {
+      background-color: #1f2937;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    footer a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px dotted rgba(0,0,0,0.2);
+    }
+
   </style>
 </head>
 <body>
-  <main class="card" role="main">
-    <div class="top">
-      <div class="avatar" aria-hidden="true">
-        <!-- Replace the src with your picture (square crop recommended: 600x600) -->
-        <img src="your-photo.jpg" alt="Your name" />
-      </div>
-      <div>
-        <h1>Your Name</h1>
-        <p class="lead">Quick one-line description about what you do. Keep it short — job title, focus area, or what you build.</p>
+  <main>
+    <img src="your-photo.jpg" alt="Eoin Molloy" class="profile" />
 
-        <div class="meta">
-          <a class="btn primary" href="#project" id="project-link">View project</a>
-          <a class="btn secondary" href="mailto:you@example.com">Email</a>
-          <a class="btn secondary" href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
-        </div>
-      </div>
-    </div>
+    <h1>Eoin Molloy</h1>
+    <p class="intro">
+      Hi, I’m Eoin Molloy — a data scientist passionate about combining math, code, and creativity to solve real-world problems. I’ve worked on projects in machine learning, optimization, and AI, and I enjoy building tools that make data meaningful.
+    </p>
 
-    <section id="project" style="margin-top:22px">
-      <h2 style="font-size:15px;margin:0 0 8px 0">Selected project</h2>
-      <p style="margin:0;color:var(--muted);line-height:1.5;">Brief one-paragraph summary of the project. Link below goes to the live demo or repo.</p>
-      <div style="margin-top:12px">
-        <a class="btn" href="https://example.com/your-project" target="_blank" rel="noopener">Open project →</a>
-      </div>
-    </section>
+    <a href="https://example.com/your-project" target="_blank" class="button">View My Project</a>
 
     <footer>
-      <div class="links">Made by Your Name · <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a></div>
+      <p>© 2025 Eoin Molloy · <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> · <a href="mailto:you@example.com">Email</a></p>
     </footer>
   </main>
 </body>
